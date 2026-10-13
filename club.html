@@ -1,0 +1,246 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<head>
+    
+    <title>Campus Club Membership</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding-top: 60px;
+            background: white;
+           
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+
+        .topnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            overflow: hidden;
+           
+        }
+
+        .topnav a {
+            float: left;
+            color:yellow;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+
+        .topnav a:hover {
+            background: black;
+        }
+
+        .card {
+            position: relative;
+            box-sizing: border-box;
+            width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 4px 4px 8px gray;
+        }
+
+        .card > h2 {
+            color: Blue;
+            margin-top: 0;
+        }
+
+        .card p {
+            font-style: italic;
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: yellow;
+            color: white;
+            font-weight: bold;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="home">
+
+    <div class="topnav">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#join">Join</a>
+    </div>
+
+    <h1>Programming Club</h1>
+
+    <div class="card">
+        <span class="badge">NEW</span>
+
+        <h2>Welcome!</h2>
+        <p id="events">Join our coding workshops and club events.</p>
+
+        <form id="join" action="/submit-membership" method="post">
+            <fieldset>
+                <legend>Join the Club</legend>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname"
+                       minlength="3" required>
+                <br><br>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+
+                <label for="studentid">Student ID</label>
+                <input type="text" id="studentid" name="studentid"
+                       placeholder="24-56789-1"
+                       required>
+                <br><br>
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age"
+                       min="17" max="40" required>
+                <br><br>
+
+                <fieldset>
+                    <legend>Membership Type</legend>
+
+                    <input type="radio" id="general" name="membership"
+                           value="general" required>
+                    <label for="general">General</label>
+
+                    <input type="radio" id="executive" name="membership"
+                           value="executive" required>
+                    <label for="executive">Executive</label>
+                </fieldset>
+                <br>
+
+                <label for="club">Preferred Club</label>
+                <select id="club" name="club" required>
+                    <option value="">Select a club</option>
+                    <option value="programming">Programming</option>
+                    <option value="robotics">Robotics</option>
+                    <option value="debate">Debate</option>
+                </select>
+                <br><br>
+
+                <label for="reason">Why do you want to join?</label>
+                <textarea id="reason" name="reason" rows="4"
+                          maxlength="200" required></textarea>
+                <br><br>
+
+                <input type="checkbox" id="rules" name="rules"
+                       value="agreed" required>
+                <label for="rules">I agree to the club rules</label>
+                <br><br>
+
+                <button type="submit">Join Now</button>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
